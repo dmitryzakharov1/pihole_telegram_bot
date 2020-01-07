@@ -1,0 +1,16 @@
+[Unit]
+# Human readable name of the unit
+Description=Python Telegram bot
+After=multi-user.target
+
+[Service]
+User=pi
+Type=idle
+# Command to execute when the service is started
+ExecStart=/usr/bin/python3 /opt/pihole_telegram_bot/parabot.py
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
+
