@@ -1,6 +1,6 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Python](https://img.shields.io/badge/Python-2--3-green)](https://www.python.org/downloads/release/python-360/)
 
-# pihole_telegram_got
+# pihole_telegram_bot
 
 This is a simple statistics bot. Bot launched at Raspberry Pi 2B. 
 
@@ -10,25 +10,29 @@ Just clone repo. Install systemd unit.
 
 ### Prerequisites
 
-You need: 
-Raspberry Pi.
-
+You need:
+- Raspberry Pi
+- Python 2 or 3 installed
+- GIT
+- Created telegram bot with TOKEN (get it on [@BotFather](https://tele.gs/botfather "@BotFather"))
+- Installed requirements.txt
 
 ```
-Give examples
+pip install -r requirements.txt --no-index
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+I use /opt directory to store binary and other stuff. Clone repo.
 
 ```
-Give the example
+mkdir /opt/
+cd /opt
+git clone https://github.com/dmitryzakharov1/pihole_telegram_bot.git
+cd pihole_telegram_bot
 ```
 
-And repeat
+Install systemd unit
 
 ```
 until finished
@@ -89,4 +93,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
