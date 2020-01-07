@@ -56,29 +56,10 @@ INFO: I use local tor node as socks5 proxy. If you no need proxy. Just comment/u
     #updater = Updater("TOKEN")
 ```
 
-## Running the tests
+## Check how it works
+Start dialog with [parabot](https://tglink.ru/parabot "parabot")
+Type `/systat` and get answer
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
