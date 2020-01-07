@@ -27,19 +27,34 @@ pip install -r requirements.txt --no-index
 I use /opt directory to store binary and other stuff. Clone repo.
 
 ```
+sudo su
 mkdir /opt/
 cd /opt
 git clone https://github.com/dmitryzakharov1/pihole_telegram_bot.git
-cd pihole_telegram_bot
 ```
 
 Install systemd unit
 
 ```
-until finished
+cd pihole_telegram_bot
+cp parabot_service.service /lib/systemd/system
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Update parabot.py with you telegram bot token and IP-adresses of Raspberry Pi.
+INFO: I use local tor node as socks5 proxy. If you no need proxy. Just comment/uncomment updater = Updater(.... line
+
+```
+    REQUEST_KWARGS={
+    'proxy_url': 'socks5://127.0.0.1:9100',
+#    'urllib3_proxy_kwargs': {
+#        'username': 'telebot',
+#        'password': 'ksdafjlk3wart',
+#    }
+    }
+
+    updater = Updater("TOKEN", request_kwargs=REQUEST_KWARGS)
+    #updater = Updater("TOKEN")
+```
 
 ## Running the tests
 
@@ -72,3 +87,7 @@ Add additional notes about how to deploy this on a live system
 ## License
 
 This project is not licenced. Do all what you won.
+
+## Special thanks
+[python-telegram-bot](http://https://github.com/python-telegram-bot/python-telegram-bot "python-telegram-bot") and [PiHole-api](https://github.com/Ewpratten/PiHole-api "PiHole-api")
+
